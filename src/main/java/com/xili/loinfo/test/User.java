@@ -1,71 +1,41 @@
 package com.xili.loinfo.test;
 
 
+import lombok.Data;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
  * @Auther: liangxin
  * @Date: 2019/8/23
- * @Description:
+ * @Description: User实体
  */
+@Data
+@ToString
 @Entity
 public class User {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 自增长策略
     private Long id;
 
+    //用户名
     @Column
     private String username;
 
+    //名字
     @Column
     private String name;
 
+    //年龄
     @Column
     private Integer age;
 
+    //email
     @Column
-    private BigDecimal balance;
+    private String email;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
 }
