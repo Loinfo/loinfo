@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-    <meta charset="UTF-8">
-    <title>thymeleaf in from</title>
+<head th:replace="~{fragments/header :: header}">
 </head>
 <body>
-<div th:replace="~{fragments/header :: header}"/>
+<div class="container blog-content-container">
 <h3 th:text="${userModel.title}">表单原型</h3>
 <form action="/users" th:action="@{/users}" method="POST" th:object="${userModel.user}">
     <input type="hidden" name="id" th:value="*{id}">
@@ -20,6 +18,7 @@
     <input type="text" name="email" th:value="*{email}">
     <input type="submit" value="提交">
 </form>
+</div>
 <div th:replace="~{fragments/footer :: footer}"/>
 </body>
 </html>

@@ -1,12 +1,12 @@
-package com.xili.loinfo.test;
+package com.xili.loinfo.blog.controller;
 
+import com.xili.loinfo.blog.domain.User;
+import com.xili.loinfo.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
