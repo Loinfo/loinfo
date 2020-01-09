@@ -1,6 +1,8 @@
 package com.xili.loinfo.blog.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -10,6 +12,8 @@ import lombok.ToString;
  */
 @Data
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class Response {
 
     /**
@@ -27,4 +31,8 @@ public class Response {
      */
     private Object body;
 
+    public Response(boolean success, String message) {
+        this.success = success;
+        this.message = message;
+    }
 }

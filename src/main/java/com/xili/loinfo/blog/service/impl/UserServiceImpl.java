@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
  * @Description: 用户服务接口实现
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
