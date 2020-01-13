@@ -4,6 +4,9 @@ import com.xili.loinfo.blog.domain.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Collection;
+import java.util.List;
+
 /**
  * @Auther: liangxin
  * @Date: 2019/11/3
@@ -45,4 +48,11 @@ public interface UserService {
      * @return
      */
     Page<User> listUsersByNameLike(String name, Pageable pageable);
+
+    /**
+     * 更具名称列表查询
+     * @param usernames
+     * @return
+     */
+    List<User> listUsersByUsernames(Collection<String> usernames);
 }
